@@ -1,0 +1,8 @@
+vendor/
+
+.env
+.env.*
+!.env.example
+
+cache/*
+!cache/.gitkeep

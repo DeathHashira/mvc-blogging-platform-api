@@ -1,0 +1,24 @@
+{
+    "name": "hashira/beginner-blogging-platform-api",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/",
+            "Model\\": "model/",
+            "Controllers\\": "controllers/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DeathHashira",
+            "email": "shabanid.zahra@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "doctrine/migrations": "^3.9",
+        "eftec/bladeone": "^4.19",
+        "vlucas/phpdotenv": "^5.7"
+    }
+}
