@@ -2,6 +2,10 @@
 
 namespace Src;
 
+/**
+ * Route manager for binding handlers for
+ * each path
+ */
 class Router
 {
     public static $routes = [

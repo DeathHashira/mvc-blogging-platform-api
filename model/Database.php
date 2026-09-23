@@ -4,6 +4,9 @@ namespace Model;
 
 use PDO;
 
+/**
+ * Create connection for database
+ */
 class Database
 {
     public ?PDO $dbConnection;

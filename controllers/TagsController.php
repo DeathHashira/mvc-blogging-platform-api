@@ -14,6 +14,11 @@ class TagsController
         public Request $request
     ) {}
 
+    /**
+     * Return all saved tags
+     *
+     * @return Response
+     */
     public function getAllTags(): Response
     {
         $allTags = $this->tagModel->readAll();
@@ -22,6 +27,11 @@ class TagsController
         );
     }
 
+    /**
+     * Add new tag to list
+     *
+     * @return Response
+     */
     public function addTag(): Response
     {
         $tagName = $this->request->post()['newtag'];

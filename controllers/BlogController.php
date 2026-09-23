@@ -8,6 +8,9 @@ use App\view\View;
 use Model\Posts;
 use Model\PostTags;
 
+/**
+ * Controller for blogs
+ */
 class BlogController
 {
     public function __construct(
@@ -55,6 +58,13 @@ class BlogController
         }
     }
 
+    /**
+     * Save each tags for one post in third relational
+     * table
+     *
+     * @param array $tags
+     * @return void
+     */
     private function savePostTags(array $tags): void
     {
         $postId = $this->postsModel->getLastId();
@@ -67,6 +77,11 @@ class BlogController
         }
     }
 
+    /**
+     * Search between blogs and returning response
+     *
+     * @return Response
+     */
     public function search(): Response
     {
         $word = $this->request->get()['search'];
@@ -78,6 +93,11 @@ class BlogController
         ]));
     }
 
+    /**
+     * Edit specific post
+     *
+     * @return Response
+     */
     public function edit(): Response
     {
         $data = $this->request->get();
@@ -94,6 +114,11 @@ class BlogController
         }
     }
 
+    /**
+     * Get detail of each blog based on id
+     *
+     * @return Response
+     */
     public function getBlog(): Response
     {
         $id = $this->request->get()['id'];

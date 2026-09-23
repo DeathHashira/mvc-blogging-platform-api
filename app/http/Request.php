@@ -2,6 +2,9 @@
 
 namespace App\http;
 
+/**
+ * Format recieving request coming from client to server
+ */
 class Request
 {
     public string $uri;

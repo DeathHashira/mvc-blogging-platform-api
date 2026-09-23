@@ -5,6 +5,10 @@ namespace Model;
 use PDO;
 use PDOStatement;
 
+/**
+ * Simple CRUD implemented for each table
+ * to extend
+ */
 class BaseRepository
 {
     public string $table;
@@ -71,14 +75,28 @@ class BaseRepository
         // will be completed later
     }
 
-    public function bindValues(PDOStatement $statement, array $data): void
+    /**
+     * Helper function to bind each value
+     * for statement
+     *
+     * @param PDOStatement $statement
+     * @param array $data
+     * @return void
+     */
+    private function bindValues(PDOStatement $statement, array $data): void
     {
         foreach ($data as $key => $value) {
             $statement->bindValue(":".$key, $value);
         }
     }
 
-    public function set(array $data): string
+    /**
+     * Helper function to format culomns for SET
+     *
+     * @param array $data
+     * @return string
+     */
+    private function set(array $data): string
     {
         $set = [];
 

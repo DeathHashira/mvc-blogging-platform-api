@@ -4,6 +4,9 @@ namespace App\http;
 
 use App\view\View;
 
+/**
+ * Format for response sending from server to client
+ */
 class Response
 {
     public function __construct(
@@ -39,6 +42,11 @@ class Response
         return $this->content;
     }
 
+    /**
+     * Manual send trigger for response
+     *
+     * @return void
+     */
     public function send()
     {
         http_response_code($this->statusCode);

@@ -14,6 +14,11 @@ class Posts extends BaseRepository
         $this->table = "posts";
     }
 
+    /**
+     * Get id of last created blog
+     *
+     * @return integer
+     */
     public function getLastId(): int
     {
         return $this->conn->lastInsertId();
