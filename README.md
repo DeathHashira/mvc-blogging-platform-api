@@ -19,6 +19,8 @@ php -S localhost:8000 -t public/
 ```
 
 ## Usage
-This is a training project for better understanding the implementation of MVC principles in creating back-end projects.
+This is a training project for better understanding the implementation of MVC principles in creating back-end projects. \
+\
+Note: The idea of this project is from [Roadmap.sh projects](https://roadmap.sh/projects/blogging-platform-api).
 ## LICENSE
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
